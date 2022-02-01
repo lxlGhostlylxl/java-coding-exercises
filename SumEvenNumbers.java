@@ -12,10 +12,11 @@ public class SumEvenNumbers {
         while(true){
            
             if(isEven(index)){
-                System.out.println("Found an even number " + index + " adding to sum");
+                System.out.println("Found an even number " + index + " adding to sum!");
                 sum += index;;
                 count++;
             }
+            
 
             index++;
             if(count >= evensToAdd){
