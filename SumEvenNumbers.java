@@ -15,11 +15,10 @@ public class SumEvenNumbers {
                 System.out.println("Found an even number " + index + " adding to sum");
                 sum += index;;
                 count++;
-            }else{
-                System.out.println("Odd number found: " + index);
             }
+
             index++;
-            if(count > evensToAdd){
+            if(count >= evensToAdd){
                 break;
             }
         }
