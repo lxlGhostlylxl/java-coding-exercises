@@ -1,11 +1,11 @@
 public class NumberToWords {
     public static void main(String[] args) {
         numberToWords(-2521);
+        System.out.println(reverse(-2521));
     }
 
     public static void numberToWords(int number) {
-
-        if (number < 1) {
+        if (number < 0) {
             System.out.println("Invalid Value");
             return;
         }
@@ -16,43 +16,43 @@ public class NumberToWords {
         for (int i = 0; i < digitCount; i++) {
             switch (reversedNumber % 10) {
                 case 0:
-                    System.out.println("ZERO");
+                    System.out.println("Zero");
                     break;
 
                 case 1:
-                    System.out.println("ONE");
+                    System.out.println("One");
                     break;
 
                 case 2:
-                    System.out.println("TWO");
+                    System.out.println("Two");
                     break;
 
                 case 3:
-                    System.out.println("THREE");
+                    System.out.println("Three");
                     break;
 
                 case 4:
-                    System.out.println("FOUR");
+                    System.out.println("Four");
                     break;
 
                 case 5:
-                    System.out.println("FIVE");
+                    System.out.println("Five");
                     break;
 
                 case 6:
-                    System.out.println("SIX");
+                    System.out.println("Six");
                     break;
 
                 case 7:
-                    System.out.println("SEVEN");
+                    System.out.println("Seven");
                     break;
 
                 case 8:
-                    System.out.println("EIGHT");
+                    System.out.println("Eight");
                     break;
 
                 case 9:
-                    System.out.println("NINE");
+                    System.out.println("Nine");
                     break;
 
                 default:
@@ -66,11 +66,11 @@ public class NumberToWords {
 
     public static int reverse(int number) {
         int reversedNumber = 0;
-        while(true){
+        while (true) {
             reversedNumber += number % 10;
             number /= 10;
             reversedNumber *= 10;
-            if(number < 1){
+            if (number == 0) {
                 reversedNumber /= 10;
                 return reversedNumber;
             }
@@ -79,6 +79,9 @@ public class NumberToWords {
 
     public static int getDigitCount(int number) {
         int count = 0;
+        if (number < 0) {
+            return -1;
+        }
         while (true) {
             count++;
             number /= 10;
@@ -89,4 +92,5 @@ public class NumberToWords {
         }
 
     }
+
 }
