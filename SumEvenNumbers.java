@@ -1,6 +1,6 @@
 public class SumEvenNumbers {
     public static void main(String[] args) {
-       System.out.println("Total sum: " + returnSumOfEvensinRange(1, 200)); ;
+       System.out.println("Total sum: ${returnSumOfEvensinRange(1, 200)}" ); ;
     }
 
 

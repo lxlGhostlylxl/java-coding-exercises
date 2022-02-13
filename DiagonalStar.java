@@ -9,14 +9,21 @@ public class DiagonalStar {
         int index = 0;
 
         while(true){
+            //Keeps up with what part of the line it's on
           for(int i = 0; i < num; i++){
+              
+            //Writes stars depending on line.  Breaks line when finished
               if(i < col){
                   System.out.print("*");
-              }else{
-                  System.out.println();
-              }
+              }         
           }
-          break;
+          System.out.println();
+          row++;
+
+          //Ends Loop
+          if(row > num){
+              break;
+          }
         }
     }
 }
