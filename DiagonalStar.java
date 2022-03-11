@@ -1,65 +1,17 @@
-public class DiagonalStar {
-    public static void main(String[] args) {
-        printSquareStar(5);
+public class DiagonalStar{
+   public static void main(String[] args) {
+        printSquareStar(9);
     }
-
-    public static void printSquareStar(int num) {
-        int row = 0;
-        int col = num;
-        int index = 0;
-        boolean print = false;
-
-        while (true) {
-            index = 0;
-
-            if(num < 5){
-                break;
-            }
-
-            // Keeps up with what part of the line it's on
-            for (int i = 0; i < num; i++) {
-
-                // Writes stars depending on line. Breaks line when finished
-                if (i < col) {
-
-                    if (row == 0 || row == num) {
-                        print = true;
-                    } else if (row == 1 || row == num - 1) {
-
-                        if (index < 2 || index >= num - 2) {
-                            print = true;
-                        }
-                    }else{
-                        if(isEven(index)){
-                            print = true;
-                        }
-                    }
-
-                    if (print) {
-                        System.out.print("*");
-                    } else {
-                        System.out.print(" ");
-                    }
-                    print = false;
-                    index++;
+    public static void printSquareStar(int number){
+        if(number < 5) System.out.println("Invalid Value");
+        else{
+            for (int row = 0; row <number; row++){
+                for (int column=0; column<number; column++){
+                    if(row==0 || row==number-1 || column==0 || column==number-1 || column==row || column==number-1-row) System.out.print("*");
+                    else System.out.print(" "); 
                 }
-            }
-            System.out.println();
-            row++;
-
-            // Ends Loop
-            if (row >= num) {
-                break;
+                System.out.println("");
             }
         }
     }
-    public static boolean isEven(int num){
-        if(num % 2 == 0){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-
 }
