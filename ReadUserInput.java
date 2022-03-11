@@ -11,5 +11,6 @@ public class ReadUserInput {
         String name = scanner.nextLine();
 
         System.out.println("Hi my name is " + name + " and I was born in " + yearOfBirth);
+        scanner.close();
     }
 }
